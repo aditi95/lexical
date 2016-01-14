@@ -1,0 +1,11 @@
+all:    lex.cc  main.cc 
+	g++ --std=c++0x lex.cc main.cc -o lex
+	./lex<try.cpp >out
+
+lex.cc: lex.l 
+	./cond_remove_scannerh.sh
+	flexc++ lex.l; 
+	sed -i '/int lex()/r enum1' Scanner.h
+
+clean:
+	rm Scanner* lex.cc 
