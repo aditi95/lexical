@@ -10,4 +10,5 @@
                     GE_OP,
                     AND_OP,
                     OR_OP,
+                    INC_OP,
                     OTHERS};

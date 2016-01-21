@@ -8,4 +8,4 @@ lex.cc: lex.l
 	sed -i '/int lex()/r enum1' Scanner.h
 
 clean:
-	rm Scanner* lex.cc 
+	rm -f Scanner* lex.cc 

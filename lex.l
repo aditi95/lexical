@@ -16,6 +16,7 @@ IF|ELSE|WHILE|FOR|RETURN                    return KEYWORD;
 ">="										return GE_OP;
 "&&"										return AND_OP;
 "||"										return OR_OP;
+"++"										return INC_OP;
 "!"											return '!';
 "="											return '=';
 "-"											return '-';

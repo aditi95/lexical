@@ -40,6 +40,9 @@ int main() {
 		case Scanner::OR_OP:
             cout << "OR_OP: " << text << '\n';
 			break;
+		case Scanner::INC_OP:
+            cout << "INC_OP: " << text << '\n';
+			break;
 		case '!':
 			cout << "not: " << text << '\n';
 			break;
