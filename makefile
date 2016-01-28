@@ -1,6 +1,6 @@
 all:    Parser.ih Parser.h Parserbase.h parse.cc Scanner.ih Scanner.h Scannerbase.h lex.cc  main.cc
 	g++   --std=c++0x lex.cc parse.cc main.cc -o parser;
-	echo "digraph G {ordering=out;\n\n""`./parser < try.cpp`""}" > graph.dot
+	echo "digraph G {ordering=out;\n\n""`./parser < try2.cpp`""}" > graph.dot
 	dot -Tpdf graph.dot -o graph.pdf
 
 Parser.ih: parse.y 

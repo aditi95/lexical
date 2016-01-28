@@ -5,7 +5,7 @@ int main(){
 
     found = 0;
 
-    
+    x=scanf("%d%d", m, n);    
     for(i=0;i<m;i++)
      for(j=0;j<n;j++)
        x=scanf("%d", a[i][j]);
@@ -18,7 +18,7 @@ int main(){
      midr=(beg+end)/2;
      if(e<a[midr][0])
        end=midr-1;
-     else if(e>=a[0]&&e<=a[n-1])
+     else if(e>=a[midr][0]&&e<=a[midr][n-1])
      {
        found=1;
      }
@@ -35,9 +35,10 @@ int main(){
        midc=(beg+end)/2;
        if(e<a[midr][midc])
          end=midc-1;
-       else if(e==a[midr])
+       else if(e==a[midr][midc])
        {
          found=1;
+         x=printf("!@%d%d\t\n", midr, midc);
        }
        else
          beg=midc+1;
